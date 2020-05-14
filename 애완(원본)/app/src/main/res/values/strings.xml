@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_logo">LogoActivity</string>
+    <string name="app_name">애견 자가진단</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">컴퓨터 공학과 안하준</string>
+    <string name="title_activity_diagnosis">Diagnosis</string>
+    <string name="title_activity_result">ResultActivity</string>
+
+</resources>
