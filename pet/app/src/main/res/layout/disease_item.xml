@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+	    <TextView
+	        android:id="@+id/disease_kcd"
+	        android:layout_width="100dp"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="center"
+	        android:layout_marginRight="5dp"
+	        android:ellipsize="end"
+	        android:gravity="center"
+	        android:maxLines="2"
+	        android:text="KCD"
+	        android:textColor="@color/text"
+	        android:textSize="12sp"
+	        android:textStyle="italic" />
+
+   	    <TextView
+	        android:id="@+id/disease_icd"
+	        android:layout_width="100dp"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="center"
+	        android:layout_marginRight="5dp"
+	        android:ellipsize="end"
+	        android:gravity="center"
+	        android:maxLines="2"
+	        android:text="ICD"
+	        android:textColor="@color/text"
+	        android:textSize="12sp"
+	        android:textStyle="italic" />
+
+	    <TextView
+	        android:id="@+id/disease_symptom"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:ellipsize="end"
+	        android:gravity="left|center_vertical"
+	        android:maxLines="2"
+	        android:paddingRight="5dp"
+	        android:text="Symptom"
+	        android:textColor="@color/text"
+	        android:textSize="12sp" />
+	</LinearLayout>
+
+    <TextView
+        android:id="@+id/disease_factor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:maxLines="4"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:text="Factor"
+        android:textColor="@color/text"
+        android:textSize="14sp" />
+
+</RelativeLayout>
