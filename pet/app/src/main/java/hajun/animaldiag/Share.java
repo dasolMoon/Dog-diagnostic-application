@@ -40,9 +40,9 @@ public class Share extends Application {
 	{
 		SQLiteHanBang myDbHelper = new SQLiteHanBang(context);
 		try {
-			myDbHelper.openDataBase();
+			myDbHelper.openDataBase();//
 
-			m_disease = myDbHelper.LoadDisease(); // 질병 객체 할당 50
+			m_disease = myDbHelper.LoadDisease(); // 질병 객체 할당 50 디비에서 가져오기때문에 동적으로 ㄱㄱ
 			m_nDisease = m_disease.length;
 
 			m_symptom = myDbHelper.LoadSymptom(); // 증상 객체 할당 92
@@ -71,6 +71,7 @@ public class Share extends Application {
 			
 			m_vecSymptomPart.get(m_symptom[i].nBodyPart-1).add(m_symptom[i]);
 		} // 선택된 증상 갯수 만큼 Vector(C#으로 따지면 리스트배열)를 이용해서 동적으로 배열을 생성해주는 것인듯
+		//엥저거뻥임
 	}
 	
 
