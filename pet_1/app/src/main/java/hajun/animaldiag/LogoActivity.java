@@ -15,12 +15,11 @@ import java.io.IOException;
 
 import hajun.animaldiag.R;
 
-public class LogoActivity extends Activity { //처음에 로고화면 띄워주고 디비구성하고, 학습하고 결과값 저장하는 과정까지 하는 클래스
+public class LogoActivity extends Activity { //처음에 로고화면 띄워주고 디비구성하고,  PFCM 학습하고 결과값 저장하는 과정까지 하는 클래스
 
 	Handler m_handler = new Handler();
 	Thread m_thread = null;
 
-	//안드로이드 앱 생명 주기(강제종료)
 	@Override
 	protected void onDestroy()
 	{
@@ -30,30 +29,25 @@ public class LogoActivity extends Activity { //처음에 로고화면 띄워주�
 		super.onDestroy();
 	}
 
-
-	//안드로이드 앱 생명 주기(앱 시작시 실행)
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.logo_layout);
 
-		setContentView(R.layout.logo_layout); // 레이아웃 전개자
 
 		//Toast.makeText(getApplicationContext(), "컴퓨터 공학과 안하준", Toast.LENGTH_SHORT).show(); //앱 시작 로딩시 뜨는 글귀
 
-		final SQLiteHanBang myDbHelper = new SQLiteHanBang(this); // 데이터 베이스 접속
-		final Share share = (Share) this.getApplicationContext(); // 데이터 준비
-		final Context context = this; //?
+		final SQLiteHanBang myDbHelper = new SQLiteHanBang(this);
+		final Share share = (Share) this.getApplicationContext();
+		final Context context = this;
 
-		// 화면 출력
-		final TextView txtProgress = (TextView) findViewById(R.id.text_progress);// 텍스트 출력
-		final ProgressBar progbar = (ProgressBar) findViewById(R.id.progressbar);// 로딩 바
+		final TextView txtProgress = (TextView) findViewById(R.id.text_progress);
+		final ProgressBar progbar = (ProgressBar) findViewById(R.id.progressbar);
 		progbar.setMax(1000);
-
-
 
 		m_thread = new Thread(new Runnable(){
 			@Override
-			public void run() { // 스레드 1 시작
+			public void run() {
 
 				// 데이터베이스 이전
 				m_handler.post(new Runnable(){
@@ -62,7 +56,7 @@ public class LogoActivity extends Activity { //처음에 로고화면 띄워주�
 						txtProgress.setText("애견 자가 진단 데이터베이스를 구성하고 있습니다.");
 					}
 				});
-				// 데이터 베이스 호출 및 생성
+
 				try {
 					myDbHelper.createDataBase();
 				} catch (IOException e) {
@@ -70,7 +64,7 @@ public class LogoActivity extends Activity { //처음에 로고화면 띄워주�
 				}
 
 				try {
-					Thread.sleep(500);// 5초간 스레드 정지
+					Thread.sleep(500);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -79,23 +73,23 @@ public class LogoActivity extends Activity { //처음에 로고화면 띄워주�
 				m_handler.post(new Runnable(){
 					@Override
 					public void run() {
-						progbar.setProgress(150);// 로딩 바 150/1000
+						progbar.setProgress(150);
 						txtProgress.setText("데이터를 불러오고 있습니다.");
 					}
 				});
 
-					share.LoadHanBangDatabase(context);
+				share.LoadHanBangDatabase(context);
 
-					try {
-						Thread.sleep(500);
+				try {
+					Thread.sleep(500);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 
 				// 한방 학습
 				if(share.IsLearned())
-					share.LoadHanBangData();
-				else
+					share.LoadHanBangData();//여기까지만 디버깅에서 출력값이 나오고... 뒤에 값은 안나오는데;;
+				else //else라서 자체가 안들어가네...... 슈발 그렇다면 위에 if값이 항상 참이라는 것인데...
 				{
 					m_handler.post(new Runnable(){
 						@Override
@@ -129,10 +123,13 @@ public class LogoActivity extends Activity { //처음에 로고화면 띄워주�
 					});
 					threadProg.start();
 					//여기까지 로딩 끝
-
 					System.out.println("한방러닝");
-					share.HanBangLearning(); //  데이터 학습 및 저장
+					share.HanBangLearning(); // pcm, pfcm 학습
+					//share.SaveHanBangData(); // 학습 데이터 저장
 
+/*
+					if(threadProg.isAlive())
+						threadProg.interrupt();//여기서 왜 스레드 인터럽??*/
 				}
 
 				try {

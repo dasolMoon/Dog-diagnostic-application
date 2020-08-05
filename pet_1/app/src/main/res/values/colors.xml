@@ -1,0 +1,8 @@
+<resources>
+
+    <color name="blackoverlay">#66000000</color>
+    <color name="darkbg">#33000000</color>
+    <color name="lightbg">#33ffffff</color>
+    <color name="text">#eeeeee</color>
+
+</resources>

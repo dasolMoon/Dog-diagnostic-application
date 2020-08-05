@@ -1,0 +1,255 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="hajun.animaldiag.ResultActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="bottom|right"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imgSilla"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/maker_name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:weightSum="1.0" >
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.16"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+                
+	            <LinearLayout
+	                android:layout_width="130dp"
+	                android:layout_height="match_parent"
+	                android:orientation="vertical" >
+
+	                <Button
+	                    android:id="@+id/btn_result_KCD1"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.8"
+	                    android:background="@color/darkbg"
+	                    android:gravity="center"
+	                    android:text="질병명"
+	                    android:textColor="@color/text"
+	                    android:textSize="16sp"
+	                    android:textStyle="bold" />
+	
+	                <TextView
+	                    android:id="@+id/txt_result_KCD1_percent"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.3"
+	                    android:background="@color/lightbg"
+	                    android:gravity="center"
+	                    android:text="20%"
+	                    android:textSize="14sp"
+						android:textColor="#000000"
+	                    android:textStyle="bold|italic" />
+	                
+	            </LinearLayout>
+	
+	            <LinearLayout
+	                android:layout_width="130dp"
+	                android:layout_height="match_parent"
+	                android:orientation="vertical" >
+
+	                <Button
+	                    android:id="@+id/btn_result_KCD2"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.8"
+	                    android:background="@color/darkbg"
+	                    android:gravity="center"
+	                    android:text="질병명"
+	                    android:textColor="@color/text"
+	                    android:textSize="16sp"
+	                    android:textStyle="bold" />
+	
+	                <TextView
+	                    android:id="@+id/txt_result_KCD2_percent"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.3"
+	                    android:background="@color/lightbg"
+	                    android:gravity="center"
+	                    android:text="20%"
+	                    android:textSize="14sp"
+						android:textColor="#000000"
+	                    android:textStyle="bold|italic" />
+	                
+	            </LinearLayout>
+	            
+	            <LinearLayout
+	                android:layout_width="130dp"
+	                android:layout_height="match_parent"
+	                android:orientation="vertical" >
+
+	                <Button
+	                    android:id="@+id/btn_result_KCD3"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.8"
+	                    android:background="@color/darkbg"
+	                    android:gravity="center"
+	                    android:text="질병명"
+	                    android:textColor="@color/text"
+	                    android:textSize="16sp"
+	                    android:textStyle="bold" />
+	
+	                <TextView
+	                    android:id="@+id/txt_result_KCD3_percent"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.3"
+	                    android:background="@color/lightbg"
+	                    android:gravity="center"
+	                    android:text="20%"
+						android:textColor="#000000"
+	                    android:textSize="14sp"
+	                    android:textStyle="bold|italic" />
+	                
+	            </LinearLayout>
+	            
+	            <LinearLayout
+	                android:layout_width="130dp"
+	                android:layout_height="match_parent"
+	                android:orientation="vertical" >
+
+	                <Button
+	                    android:id="@+id/btn_result_KCD4"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.8"
+	                    android:background="@color/darkbg"
+	                    android:gravity="center"
+	                    android:text="질병명"
+	                    android:textColor="@color/text"
+	                    android:textSize="16sp"
+	                    android:textStyle="bold" />
+	
+	                <TextView
+	                    android:id="@+id/txt_result_KCD4_percent"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.3"
+	                    android:background="@color/lightbg"
+	                    android:gravity="center"
+	                    android:text="20%"
+						android:textColor="#000000"
+	                    android:textSize="14sp"
+	                    android:textStyle="bold|italic" />
+	                
+	            </LinearLayout>
+	            
+	            <LinearLayout
+	                android:layout_width="130dp"
+	                android:layout_height="match_parent"
+	                android:orientation="vertical" >
+
+	                <Button
+	                    android:id="@+id/btn_result_KCD5"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.8"
+	                    android:background="@color/darkbg"
+	                    android:gravity="center"
+	                    android:text="질병명"
+	                    android:textColor="@color/text"
+	                    android:textSize="16sp"
+	                    android:textStyle="bold" />
+	
+	                <TextView
+	                    android:id="@+id/txt_result_KCD5_percent"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="0dp"
+	                    android:layout_weight="0.3"
+	                    android:background="@color/lightbg"
+	                    android:gravity="center"
+	                    android:text="20%"
+						android:textColor="#000000"
+	                    android:textSize="14sp"
+	                    android:textStyle="bold|italic" />
+	                
+	            </LinearLayout>	            	            
+                
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/darkbg"
+                android:gravity="center"
+                android:text="질병 설명"
+                android:textSize="14sp"
+				android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <hajun.animaldiag.ZoomTextView
+                        android:id="@+id/txt_result_explanation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/lightbg"
+                        android:gravity="top|left"
+                        android:padding="5dp"
+                        android:text="마이아파"
+						android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+
+</RelativeLayout>

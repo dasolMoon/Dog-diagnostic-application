@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_image"
+    tools:context="hajun.animaldiag.LogoActivity" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1.0"
+        android:orientation="vertical" >
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="0.85"
+			android:gravity="center_vertical"
+			android:orientation="vertical"
+			android:weightSum="1.0">
+
+			<ImageView
+				android:id="@+id/imgTitle"
+				android:layout_width="match_parent"
+				android:layout_height="416dp"
+				android:src="@drawable/title" />
+
+			<ProgressBar
+				android:id="@+id/progressbar"
+				style="?android:attr/progressBarStyleHorizontal"
+				android:layout_width="match_parent"
+				android:layout_height="27dp"
+				android:paddingLeft="30dp"
+				android:paddingRight="30dp"
+				android:progressDrawable="@drawable/progress" />
+
+			<TextView
+				android:id="@+id/text_progress"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.43"
+				android:gravity="center_horizontal"
+				android:paddingLeft="30dp"
+				android:paddingRight="30dp"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:textColor="#000000"
+				android:textSize="12sp" />
+
+		</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp" >
+
+			<ImageView
+				android:id="@+id/imgSilla"
+				android:layout_width="100dp"
+				android:layout_height="40dp"
+				android:layout_gravity="bottom"
+				android:layout_marginRight="15dp"
+				android:src="@drawable/maker_name" />
+		</LinearLayout>
+    </LinearLayout>    
+    
+</RelativeLayout>

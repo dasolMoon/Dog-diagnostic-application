@@ -27,7 +27,7 @@ public class Share extends Application {
 	BeanSymptom				m_RemedyDetail;
 	Vector<BeanSymptom> 	m_vecSelected = new Vector<BeanSymptom>(); //List 개념과 동일
 	
-	// 학습
+	// FCM
 	public HanBang		m_hanbang = new HanBang();
 	
 	// ART
@@ -35,7 +35,7 @@ public class Share extends Application {
 	
 	
 	String m_strDataPath;// = "HFCM.DAT";
-	//데이터 로드
+
 	public void LoadHanBangDatabase(Context context)
 	{
 		SQLiteHanBang myDbHelper = new SQLiteHanBang(context);
@@ -62,7 +62,7 @@ public class Share extends Application {
 		{
 			Vector<BeanSymptom> beans = new Vector<BeanSymptom>();
 			m_vecSymptomPart.add(beans);
-		} //?
+		}
 		
 		for(int i = 0; i < m_nSymptom; i++)
 		{
@@ -70,9 +70,9 @@ public class Share extends Application {
 				continue;
 			
 			m_vecSymptomPart.get(m_symptom[i].nBodyPart-1).add(m_symptom[i]);
-		}//?
+		} // 선택된 증상 갯수 만큼 Vector(C#으로 따지면 리스트배열)를 이용해서 동적으로 배열을 생성해주는 것인듯
+		//엥저거뻥임
 	}
-
 	
 
 	public boolean IsLearned() // 학습되었는가를 묻는 함수
