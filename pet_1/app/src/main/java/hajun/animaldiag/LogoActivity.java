@@ -35,7 +35,7 @@ public class LogoActivity extends Activity { //처음에 로고화면 띄워주�
 		setContentView(R.layout.logo_layout);
 
 
-		//Toast.makeText(getApplicationContext(), "컴퓨터 공학과 안하준", Toast.LENGTH_SHORT).show(); //앱 시작 로딩시 뜨는 글귀
+		Toast.makeText(getApplicationContext(), "테스트 메세지", Toast.LENGTH_SHORT).show(); //앱 시작 로딩시 뜨는 글귀
 
 		final SQLiteHanBang myDbHelper = new SQLiteHanBang(this);
 		final Share share = (Share) this.getApplicationContext();
