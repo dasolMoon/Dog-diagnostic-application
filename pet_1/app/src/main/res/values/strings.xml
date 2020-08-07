@@ -2,7 +2,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_logo">LogoActivity</string>
-    <string name="app_name">애견 자가진단 어플리케이션</string>
+    <string name="app_name">반려견 자가진단 어플리케이션</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">임시 내용 입니다</string>
     <string name="title_activity_diagnosis">Diagnosis</string>

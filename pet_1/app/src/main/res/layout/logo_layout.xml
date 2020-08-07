@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bg_image"
     tools:context="hajun.animaldiag.LogoActivity" >
-
+	//tools:context에 선언된 내용은 이 xml은 ~activity가 실행될 때 열리는 레이아웃이다 라고 이해하면 됨
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,13 +38,13 @@
 			<TextView
 				android:id="@+id/text_progress"
 				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
+				android:layout_height="88dp"
 				android:layout_weight="0.43"
 				android:gravity="center_horizontal"
 				android:paddingLeft="30dp"
 				android:paddingRight="30dp"
 				android:textAppearance="?android:attr/textAppearanceMedium"
-				android:textColor="#000000"
+				android:textColor="#A65600"
 				android:textSize="12sp" />
 
 		</LinearLayout>
