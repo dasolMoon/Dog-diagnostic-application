@@ -28,7 +28,7 @@ public class Share extends Application {
 	Vector<BeanSymptom> 	m_vecSelected = new Vector<BeanSymptom>(); //List 개념과 동일
 	
 	// FCM
-	public HanBang		m_hanbang = new HanBang();
+	public HanBang		m_hanbang = new HanBang(); //이 액티비티가 실제로 fcm, pfcm연산을 수행하는것으로 보임
 	
 	// ART
 
@@ -48,7 +48,7 @@ public class Share extends Application {
 			m_symptom = myDbHelper.LoadSymptom(); // 증상 객체 할당 92
 			m_nSymptom = m_symptom.length;
 
-			m_bodypart = myDbHelper.LoadBodyPart(); // 바디 객체 할당 4
+			m_bodypart = myDbHelper.LoadBodyPart(); // 바디 객체 할당 4 (내과 몸 얼굴 다리)
 			m_nBodyPart = m_bodypart.length;
 
 			myDbHelper.close();
