@@ -21,7 +21,8 @@ public class LogoActivity extends Activity { //처음에 로고화면 띄워주�
 	Thread m_thread = null;
 
 	@Override
-	protected void onDestroy()
+	protected void onDestroy() // 액티비티가 소멸되기 전 실행됨 isFinish()메소드로 사용자가 종료했는지, 시스템이 종료했는지 구분할 수 있다
+			//이 액티비티는 로고 xml에서 사용되는 단편적인 액티비티같다. onDestroy메소드를 적용했더니 화면이 뜨자마자 해당 메세지가 나왔다.
 	{
 		if(m_thread != null && m_thread.isAlive())
 			m_thread.interrupt();
@@ -30,22 +31,22 @@ public class LogoActivity extends Activity { //처음에 로고화면 띄워주�
 	}
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) { //액티비티생성시 첫 1회 만들어짐
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.logo_layout);
 
+		Toast.makeText(getApplicationContext(), "테스트 메세지", Toast.LENGTH_SHORT).show(); // 이 액티비티 시작시 보여짐
 
-		Toast.makeText(getApplicationContext(), "테스트 메세지", Toast.LENGTH_SHORT).show(); //앱 시작 로딩시 뜨는 글귀
+		// 초기 변수 등을 정의함. 여기서 final은 지역변수를 전역변수로 만들 때 사용
+		final SQLiteHanBang myDbHelper = new SQLiteHanBang(this); // SQLiteHanBang 액티비티가 뭔지 이해 해야함 ..
+		final Share share = (Share) this.getApplicationContext();// Share 액티비티가 뭔지 이해 해야함 ..
+		final Context context = this; //앞으로 쓰일 context는 this로 지정
 
-		final SQLiteHanBang myDbHelper = new SQLiteHanBang(this);
-		final Share share = (Share) this.getApplicationContext();
-		final Context context = this;
+		final TextView txtProgress = (TextView) findViewById(R.id.text_progress); // 프로그래스바 아래의 텍스트 객체 생성
+		final ProgressBar progbar = (ProgressBar) findViewById(R.id.progressbar); // 프로그래스바 객체 생성
+		progbar.setMax(1000); // 프로그래스바의 max값을 1000으로 설정
 
-		final TextView txtProgress = (TextView) findViewById(R.id.text_progress);
-		final ProgressBar progbar = (ProgressBar) findViewById(R.id.progressbar);
-		progbar.setMax(1000);
-
-		m_thread = new Thread(new Runnable(){
+		m_thread = new Thread(new Runnable(){ // 액티비티 전역변수인 m_thread 에 새로 스레드 부여
 			@Override
 			public void run() {
 
