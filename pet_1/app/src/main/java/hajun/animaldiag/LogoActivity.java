@@ -38,7 +38,7 @@ public class LogoActivity extends Activity { //처음에 로고화면 띄워주�
 		Toast.makeText(getApplicationContext(), "테스트 메세지", Toast.LENGTH_SHORT).show(); // 이 액티비티 시작시 보여짐
 
 		// 초기 변수 등을 정의함. 여기서 final은 지역변수를 전역변수로 만들 때 사용
-		final SQLiteHanBang myDbHelper = new SQLiteHanBang(this); // SQLiteHanBang 액티비티가 뭔지 이해 해야함 ..
+		final SQLiteHanBang myDbHelper = new SQLiteHanBang(this); // SQLiteHanBang  // 비어있는 데이터베이스를 만들고 자료가 있는 데이터베이스를 복사함
 		final Share share = (Share) this.getApplicationContext();// Share 액티비티가 뭔지 이해 해야함 ..
 		final Context context = this; //앞으로 쓰일 context는 this로 지정
 
