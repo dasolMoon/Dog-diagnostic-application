@@ -38,7 +38,7 @@ public class Share extends Application {
 
 	public void LoadHanBangDatabase(Context context)
 	{
-		SQLiteHanBang myDbHelper = new SQLiteHanBang(context);
+		SqlActivity myDbHelper = new SqlActivity(context);
 		try {
 			myDbHelper.openDataBase();//
 

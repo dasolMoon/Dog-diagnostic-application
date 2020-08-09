@@ -14,7 +14,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Calendar;
 
-public class SQLiteHanBang extends SQLiteOpenHelper {
+public class SqlActivity extends SQLiteOpenHelper {
 
 	//The Android's default system path of your application database.
 	private static String DB_PATH = "/data/data/hajun.animaldiag/databases/"; //DB 주소
@@ -30,7 +30,7 @@ public class SQLiteHanBang extends SQLiteOpenHelper {
 	 * Takes and keeps a reference of the passed context in order to access to the application assets and resources.
 	 * @param context
 	 */
-	public SQLiteHanBang(Context context){ // 생성자
+	public SqlActivity(Context context){ // 생성자
 		super(context, DB_NAME, null, DB_VER);
 		this.myContext = context;
 	}	

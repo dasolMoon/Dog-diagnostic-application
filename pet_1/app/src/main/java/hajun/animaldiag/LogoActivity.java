@@ -3,8 +3,6 @@ package hajun.animaldiag;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
@@ -12,8 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
-
-import hajun.animaldiag.R;
 
 public class LogoActivity extends Activity { //처음에 로고화면 띄워주고 디비구성하고,  PFCM 학습하고 결과값 저장하는 과정까지 하는 클래스
 
@@ -38,7 +34,7 @@ public class LogoActivity extends Activity { //처음에 로고화면 띄워주�
 		Toast.makeText(getApplicationContext(), "테스트 메세지", Toast.LENGTH_SHORT).show(); // 이 액티비티 시작시 보여짐
 
 		// 초기 변수 등을 정의함. 여기서 final은 지역변수를 전역변수로 만들 때 사용
-		final SQLiteHanBang myDbHelper = new SQLiteHanBang(this); // SQLiteHanBang  // 비어있는 데이터베이스를 만들고 자료가 있는 데이터베이스를 복사함
+		final SqlActivity myDbHelper = new SqlActivity(this); // SqlActivity  // 비어있는 데이터베이스를 만들고 자료가 있는 데이터베이스를 복사함
 		final Share share = (Share) this.getApplicationContext();// Share 액티비티가 뭔지 이해 해야함 ..
 		final Context context = this; //앞으로 쓰일 context는 this로 지정
 
