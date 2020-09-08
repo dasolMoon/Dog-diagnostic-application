@@ -17,7 +17,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class PossFCM {
+public class PossFCM { //pfcm 액티비티
 
     private double m_dEpsilon;
     private double m_dFuzziness;
@@ -44,13 +44,13 @@ public class PossFCM {
     boolean m_LearnState = false;
 
 
-    public PossFCM()
+    public PossFCM() //원희오빠 코드 넣을것
     {
     }
 
     public void SetTrainData(int nDataNum, int nDimensionNum, int nClusterNum, double[][] dTrain)
     {
-        m_nDataNum = nDataNum;
+        m_nDataNum = nDataNum; //데이터갯수
         m_nDimensionNum = nDimensionNum;
         m_nClusterNum = nClusterNum;
 
@@ -102,7 +102,7 @@ public class PossFCM {
     double Diff = 0.0;
 
 
-    public void PFCMLearning(double dFuzziness, double dEpsilon)
+    public void PFCMLearning(double dFuzziness, double dEpsilon) //  실제 pfcm 과정 - 메소드 호출로 진행
     {
         m_dFuzziness = dFuzziness; //퍼지 상수값
         m_dP = 2 / (m_dFuzziness - 1);
@@ -119,12 +119,11 @@ public class PossFCM {
         while(Diff > m_dEpsilon);
         //while(m_nRepeatCnt < 10);
         m_LearnState = true;
-/*
         for (int i = 0 ; i < m_nClusterNum; i++)
             for (int j = 0 ; j < m_nDimensionNum; j++)
             {
                 System.out.println("m_dT["+i+"]["+j+"] : " + m_dT[i][j]);
-            }*/
+            }
         System.out.println("PFCM Learning Compelete....");
     }
 
@@ -147,7 +146,7 @@ public class PossFCM {
     }
 
 
-    // 클러스터 중심 값 계산
+    // 클러스터 중심 값 계산                                                                                                           ** 수정 요망
     private void Step2_CalcClusterCenter()
     {
         for(int i = 0; i <m_nClusterNum ; i++) // 이전 중심값에 현재 중심값을 저장
@@ -173,7 +172,7 @@ public class PossFCM {
         }
     }
 
-    // 멤버십 업데이트 및 최대 변화량
+    // 멤버십 업데이트 및 최대 변화량  임게값에 비교할 값 계산부분
     private void Step3_UpdateMembershipFunc()
     {
         double sum = 0;
@@ -205,7 +204,7 @@ public class PossFCM {
        }
 
 
-        for (int i = 0 ; i <m_nClusterNum ; i++) // 새로운 소속도와 전형성을 갱신
+        for (int i = 0 ; i <m_nClusterNum ; i++) // 새로운 소속도와 전형성을 갱신                                                            ** 수정 요망
             for (int j = 0 ; j < m_nDimensionNum; j++)
             {
                 m_dU[i][j] = CalculateMembership(i,j);
@@ -213,7 +212,7 @@ public class PossFCM {
             }
     }
 
-    private double CalculateMembership(int clusterindex, int dataindex)
+    private double CalculateMembership(int clusterindex, int dataindex)//                                                           ** 수정 요망
     {
         double sum = 0;
         for (int i = 0 ; i < m_nClusterNum; i++)
@@ -245,7 +244,8 @@ public class PossFCM {
             int tCount = 0;
 
             for (int j = 0; j < m_nDimensionNum; j++)
-            {
+            {//뭔가를 적고있어나는 타이핑중이야 아무뜻은없고주석처리할것이긴한데 뭐라고언제까지적어야햐ㅏㄹ까
+
                 if (m_dX[i][j] == 1)
                 {
                     tCount++;
