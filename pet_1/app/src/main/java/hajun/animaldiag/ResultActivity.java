@@ -16,7 +16,7 @@ public class ResultActivity extends Activity {
 	Share	m_share;
 	PossFCM m_pfcm;
 
-	int		m_nResultNum = 5;
+	int		m_nResultNum = 10;
 
 	BeanDisease[] m_disease = new BeanDisease[m_nResultNum];
 	double[] m_dDist = new double[m_nResultNum];
@@ -52,12 +52,22 @@ public class ResultActivity extends Activity {
 		btnKCD[2] = (Button) findViewById(R.id.btn_result_KCD3);
 		btnKCD[3] = (Button) findViewById(R.id.btn_result_KCD4);
 		btnKCD[4] = (Button) findViewById(R.id.btn_result_KCD5);
+		btnKCD[5] = (Button) findViewById(R.id.btn_result_KCD6);
+		btnKCD[6] = (Button) findViewById(R.id.btn_result_KCD7);
+		btnKCD[7] = (Button) findViewById(R.id.btn_result_KCD8);
+		btnKCD[8] = (Button) findViewById(R.id.btn_result_KCD9);
+		btnKCD[9] = (Button) findViewById(R.id.btn_result_KCD10);
 
 		txtKCDPercent[0] = (TextView) findViewById(R.id.txt_result_KCD1_percent);
 		txtKCDPercent[1] = (TextView) findViewById(R.id.txt_result_KCD2_percent);
 		txtKCDPercent[2] = (TextView) findViewById(R.id.txt_result_KCD3_percent);
 		txtKCDPercent[3] = (TextView) findViewById(R.id.txt_result_KCD4_percent);
 		txtKCDPercent[4] = (TextView) findViewById(R.id.txt_result_KCD5_percent);
+		txtKCDPercent[5] = (TextView) findViewById(R.id.txt_result_KCD6_percent);
+		txtKCDPercent[6] = (TextView) findViewById(R.id.txt_result_KCD7_percent);
+		txtKCDPercent[7] = (TextView) findViewById(R.id.txt_result_KCD8_percent);
+		txtKCDPercent[8] = (TextView) findViewById(R.id.txt_result_KCD9_percent);
+		txtKCDPercent[9] = (TextView) findViewById(R.id.txt_result_KCD10_percent);
 
 		for(int i = 0; i < m_nResultNum; i++)
 		{

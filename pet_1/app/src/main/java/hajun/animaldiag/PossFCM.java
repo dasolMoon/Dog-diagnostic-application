@@ -244,7 +244,7 @@ public class PossFCM { //pfcm 액티비티
             int tCount = 0;
 
             for (int j = 0; j < m_nDimensionNum; j++)
-            {//뭔가를 적고있어나는 타이핑중이야 아무뜻은없고주석처리할것이긴한데 뭐라고언제까지적어야햐ㅏㄹ까
+            {
 
                 if (m_dX[i][j] == 1)
                 {
