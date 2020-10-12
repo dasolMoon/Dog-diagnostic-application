@@ -21,6 +21,7 @@
             android:id="@+id/btnDiagonsis_diag"
             style="@style/btnStyleShakespeare"
             android:layout_width="match_parent"
+            android:background="#442A1B"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
             android:layout_weight="1.0"
@@ -68,14 +69,13 @@
                     android:orientation="vertical"
                     android:weightSum="1.0" >
 
-					<LinearLayout
-						android:layout_width="match_parent"
-						android:layout_height="match_parent"
-						android:background="@drawable/animal_front"
-						android:gravity="left"
-						android:orientation="horizontal">
-					</LinearLayout>
- 				</LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/dog1"
+                        android:gravity="left"
+                        android:orientation="horizontal"></LinearLayout>
+                </LinearLayout>
             </RelativeLayout>
 
 
@@ -98,7 +98,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:background="@drawable/dog_back"
+                        android:background="@drawable/dog2"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.9"
@@ -171,7 +171,7 @@
                     android:layout_height="20dp"
                     android:background="#66000000"
                     android:gravity="center"
-                    android:text="선택 부위"
+                    android:text="해당 부위"
                     android:textColor="#ffffff"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -179,6 +179,7 @@
                 <Button
                     android:id="@+id/btn_diag_inner"
                     style="@style/btnStyleGary"
+                    android:background="#442A1B"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -187,6 +188,7 @@
                 <Button
                     android:id="@+id/btn_diag_body"
                     style="@style/btnStyleGary"
+                    android:background="#442A1B"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -195,6 +197,7 @@
                 <Button
                     android:id="@+id/btn_diag_face"
                     style="@style/btnStyleGary"
+                    android:background="#442A1B"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -203,6 +206,7 @@
                 <Button
                     android:id="@+id/btn_diag_leg"
                     style="@style/btnStyleGary"
+                    android:background="#442A1B"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_margin="5dp"
@@ -234,22 +238,22 @@
                 <ListView
                     android:id="@android:id/list"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-                </ListView>
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content"></ListView>
 
             </LinearLayout>
         </RelativeLayout>
+
         <Button
             android:id="@+id/btnFlipper"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/flipper"
+            android:layout_alignParentBottom="true"
             android:layout_marginBottom="15dp"
-            android:alpha="0.8"
-            android:background="@drawable/btn_back"
+            android:alpha="1"
+            android:background="@drawable/flip"
             android:gravity="center"
-            android:text="앞뒤\n전환"
             android:textColor="@color/text"
             android:textSize="12sp"
             android:textStyle="bold" />
@@ -261,8 +265,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/relativeLayout2"
         android:layout_alignParentTop="true"
-        android:text="자가 진단을 위한 증상 선택"
-		android:textColor="#000000"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="진단을 위한 증상을 클릭해주세요"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000" />
 
 </RelativeLayout>

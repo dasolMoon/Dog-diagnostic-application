@@ -42,10 +42,10 @@ public class Share extends Application {
 		try {
 			myDbHelper.openDataBase();//
 
-			m_disease = myDbHelper.LoadDisease(); // 질병 객체 할당 50 디비에서 가져오기때문에 동적으로 ㄱㄱ
+			m_disease = myDbHelper.LoadDisease(); // 질병 객체 할당 50 //이제는 150개
 			m_nDisease = m_disease.length;
 
-			m_symptom = myDbHelper.LoadSymptom(); // 증상 객체 할당 92
+			m_symptom = myDbHelper.LoadSymptom(); // 증상 객체 할당 92  //이제는 217개
 			m_nSymptom = m_symptom.length;
 
 			m_bodypart = myDbHelper.LoadBodyPart(); // 바디 객체 할당 4 (내과 몸 얼굴 다리)

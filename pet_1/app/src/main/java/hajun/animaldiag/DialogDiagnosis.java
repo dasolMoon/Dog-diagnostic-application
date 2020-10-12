@@ -49,7 +49,7 @@ public class DialogDiagnosis extends Dialog
 			{
 				final Button btn = new Button(m_context);
 				btn.setTextColor(Color.rgb(0,0,40));
-				btn.setBackgroundColor(Color.argb(32, 60, 60, 60));
+				btn.setBackgroundColor(Color.argb(32, 80, 60, 60));
 				btn.setText(bean.strName);
 				btn.setOnClickListener(new View.OnClickListener() {
 					@Override
